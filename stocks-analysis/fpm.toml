@@ -4,15 +4,27 @@ license = "license"
 author = "lukbrb"
 maintainer = "lucasbarbr@outlook.com"
 copyright = "Copyright 2023, lukbrb"
+
 [build]
 auto-executables = true
 auto-tests = true
 auto-examples = true
 module-naming = false
+
 [install]
 library = false
+
 [fortran]
 implicit-typing = false
 implicit-external = false
 source-form = "free"
 
+[[executable]]
+name="gain"
+source-dir="app"
+main="stock_gain.f90"
+
+[[executable]]
+name="volatibility"
+source-dir="app"
+main="stock_volatibility.f90"
