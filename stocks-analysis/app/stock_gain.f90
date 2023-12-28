@@ -1,6 +1,6 @@
 program stock_gain
-  use stocks_analysis, only: say_hello
   use mod_io, only: read_stocks
+  use mod_array, only: reverse
   implicit none
 
   integer :: n
@@ -17,8 +17,9 @@ program stock_gain
     call read_stocks('data/' // trim(symbols(n)) // '.csv', &
                     time, open, high, low, close, adjclose, volume)
 
-    gain = -(adjclose(size(adjclose)) - adjclose(1))
-    print *, symbols(n), gain, nint(gain / adjclose(size(adjclose)) * 100)
+    adjclose = reverse(adjclose)
+    gain = (adjclose(size(adjclose)) - adjclose(1))
+    print *, symbols(n), gain, nint(gain / adjclose(1) * 100)
   end do
 
 
