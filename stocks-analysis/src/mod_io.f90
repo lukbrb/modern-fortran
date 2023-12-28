@@ -3,7 +3,7 @@ module mod_io
     implicit none
     
     private
-    public :: read_stocks
+    public :: read_stocks, write_stock
 contains 
 
 integer function num_records(filename)
@@ -47,6 +47,16 @@ subroutine read_stocks(filename, time, open_, high, low, close_, adjclose, volum
     1 close(fileunit)  ! Fortran utilise le 1 s'il rencontre une exception dans 'read'
 end subroutine read_stocks
     
-
+subroutine write_stock(filename, time, price, mvavg, mvstd)
+    character(len=*), intent(in) :: filename
+    character(len=:), allocatable, intent(in) :: time(:)
+    real, dimension(:), intent(in) :: price, mvavg, mvstd
+    integer :: fileunit, n
+    open(newunit=fileunit, file=filename)
+    do n = 1, size(time)
+      write(fileunit, fmt=*) time(n), price(n), mvavg(n), mvstd(n)
+    end do
+    close(fileunit)
+  end subroutine write_stock 
 
 end module mod_io
