@@ -21,3 +21,7 @@ Les données sont disponibles à ... et au format CSV, organisées de la manièr
 - `volume` : Nombre total de parts tradé pendant la journée
 - `dividend_amount`: Le nombre de dividende payé par part
 - `split_coefficient`: Coefficient de division
+
+## 2. Définitions
+
+**Volatilité:** Écart-type du court du stock relativement à sa moyenne
