@@ -22,7 +22,7 @@ class Stock():
             self.mvstd.append(float(line[3]))
 
 
-datapath = '..'
+datapath = '../data'
 
 stocks = ['AAPL', 'AMZN', 'CRAY', 'CSCO', 'HPQ',
           'IBM', 'INTC', 'MSFT', 'NVDA', 'ORCL']
