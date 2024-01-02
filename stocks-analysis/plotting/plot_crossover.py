@@ -35,7 +35,7 @@ def read_crossover(filename):
     return buy, sell
 
 
-datapath = '..'
+datapath = '../data'
 
 stocks = ['AAPL', 'AMZN', 'CRAY', 'CSCO', 'HPQ',
           'IBM', 'INTC', 'MSFT', 'NVDA', 'ORCL']

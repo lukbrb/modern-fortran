@@ -28,3 +28,8 @@ main="stock_gain.f90"
 name="volatibility"
 source-dir="app"
 main="stock_volatibility.f90"
+
+[[executable]]
+name="crossover"
+source-dir="app"
+main="stock_crossover.f90"

@@ -1,7 +1,7 @@
 all: volatility crossover
 
 volatility:
-	python plot_volatility.py
+	python3 plot_volatility.py
 
 crossover:
-	python plot_crossover.py
+	python3 plot_crossover.py
