@@ -72,7 +72,7 @@ for stock in stocks:
     plt.ylabel('Adj. close [USD]', fontsize=16)
     plt.title(stock, fontsize=16)
     plt.grid(True)
-    plt.savefig(stock + '_crossover.svg')
+    # plt.savefig(stock + '_crossover.svg')
     plt.savefig(stock + '_crossover.png')
     plt.close(fig)
 
